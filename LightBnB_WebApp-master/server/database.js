@@ -165,7 +165,7 @@ const addProperty = function(property) {
   `;
   const values = [property.owner_id, property.title, property.description, property.thumbnail_photo_url, property.cover_photo_url, property.cost_per_night, property.parking_spaces, property.number_of_bathrooms, property.number_of_bedrooms, property.country, property.street, property.city, property.province, property.post_code];
   
-  return db.query(queryString, values)
+  return pool.query(queryString, values)
     .then(res => {
       return res.rows[0];
     })
