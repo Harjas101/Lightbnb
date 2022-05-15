@@ -106,6 +106,7 @@ $(() => {
     views_manager.show('none');
 
     const data = $(this).serialize();
+    console.log(data)
     submitProperty(data)
     .then(() => {
       views_manager.show('listings');
